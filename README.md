@@ -1,3 +1,4 @@
+![Tests](https://github.com/wpxq/w-cards/actions/workflows/tests.yml/badge.svg)
 # W-Cards: Offline-First Wallet PWA
 
 A minimalist, high-performance Progressive Web App (PWA) designed to store loyalty cards and barcodes. Built with a focus on speed, offline reliability, and seamless cloud synchronization.
