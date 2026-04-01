@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Card {
+  id        String   @id @default(cuid())
+  name      String
+  code      String
+  color     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
