@@ -1,0 +1,16 @@
+name: Docker Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Build and Run Tests in Docker
+        run: |
+          docker compose up -d db
+          docker compose build backend
+          # Spustíme testy přímo v kontejneru
+          docker compose run --rm backend pytest
